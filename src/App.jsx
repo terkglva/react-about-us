@@ -1,64 +1,38 @@
 // src/App.jsx
 
-import './App.css'; // Оставляем подключение стилей
+import './App.css'; // Подключаем наши новые стили
 
 function App() {
   return (
-    // Вставляем ваш HTML-код сюда, преобразовав его в JSX
-    <div className="aboutus-section">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-3 col-sm-6 col-xs-12">
-            <div className="aboutus">
-              <h2 className="aboutus-title">About Us</h2>
-              <p className="aboutus-text">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
-              <p className="aboutus-text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem</p>
-              <a className="aboutus-more" href="#">read more</a>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12">
-            <div className="aboutus-banner">
-              {/* Тег img в JSX должен быть самозакрывающимся (/> в конце) */}
-              <img src="http://themeinnovation.com/demo2/html/build-up/img/home1/about1.jpg" alt="" />
-            </div>
-          </div>
-          <div className="col-md-5 col-sm-6 col-xs-12">
-            <div className="feature">
-              <div className="feature-box">
-                <div className="clearfix">
-                  <div className="iconset">
-                    <span className="glyphicon glyphicon-cog icon"></span>
-                  </div>
-                  <div className="feature-content">
-                    <h4>Work with heart</h4>
-                    <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="feature-box">
-                <div className="clearfix">
-                  <div className="iconset">
-                    <span className="glyphicon glyphicon-cog icon"></span>
-                  </div>
-                  <div className="feature-content">
-                    <h4>Reliable services</h4>
-                    <p>Donec vitae sapien ut libero venenatis faucibu. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt</p>
-                  </div>
-                </div>
-              </div>
-              <div className="feature-box">
-                <div className="clearfix">
-                  <div className="iconset">
-                    <span className="glyphicon glyphicon-cog icon"></span>
-                  </div>
-                  <div className="feature-content">
-                    <h4>Great support</h4>
-                    <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="profile-card">
+      {/* Новый заголовок, интегрированный в карточку */}
+      <div className="card-title-banner">
+        <h2>About Me</h2>
+      </div>
+
+      <div className="profile-header">
+        <img 
+          src="https://placehold.co/150x150/6C63FF/FFFFFF?text=TK" 
+          alt="Avatar for Tomiris Kairzhan" 
+          className="profile-avatar"
+        />
+      </div>
+      <div className="profile-body">
+        <h1 className="profile-name">Kairzhan Tomiris</h1>
+        <p className="profile-description">
+          Aspiring Web Developer & Lifelong Learner
+        </p>
+        <div className="contact-info">
+          <a href="https://github.com/terkglva" target="_blank" rel="noopener noreferrer" className="contact-link github">
+            {/* Иконка GitHub */}
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <span>terkglva</span>
+          </a>
+          <a href="mailto:t.kairzhan@kbtu.kz" className="contact-link email">
+            {/* Иконка почты */}
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 5H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-1.6 2.9-7.9 5.3a1 1 0 0 1-1 0L4.6 7.9A1 1 0 0 1 5.4 6.1l7.5 5 7.5-5a1 1 0 1 1 .8 1.8z"/></svg>
+            <span>t.kairzhan@kbtu.kz</span>
+          </a>
         </div>
       </div>
     </div>
@@ -66,6 +40,4 @@ function App() {
 }
 
 export default App;
-
-
 
